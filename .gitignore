@@ -1,0 +1,5 @@
+data/weather.txt
+data/.tmux-kanagawa-state
+.direnv
+.devenv
+result
