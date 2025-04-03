@@ -317,7 +317,7 @@ main() {
 
   # Window option
   if $show_powerline; then
-    tmux set-window-option -g window-status-current-format "#[fg=cyan]#[fg=black]#[bg=cyan]#I #[bg=brightblack]#[fg=white] #W#[fg=brightblack]#[bg=white] #[bg=white] #[fg=magenta]#[fg=black]#[bg=magenta]λ #[fg=white]#[bg=brightblack] %a %d %b #[fg=magenta]%R#[fg=brightblack]#[bg=white]"
+    tmux set-window-option -g window-status-current-format "#[fg=cyan]#[fg=black]#[bg=cyan]#I #[bg=brightblack]#[fg=white] #W#[fg=brightblack]#[bg=white] #[bg=default] #[fg=magenta]#[fg=black]#[bg=magenta]λ #[fg=white]#[bg=brightblack] %a %d %b #[fg=magenta]%R#[fg=brightblack]#[bg=default]"
   else
     tmux set-window-option -g window-status-current-format "#[fg=magenta]#[fg=black]#[bg=magenta]#I #[bg=brightblack]#[fg=white] #W#[fg=brightblack]#[bg=white] "
   fi
@@ -330,8 +330,8 @@ main() {
   tmux set-window-option -g window-status-activity-style "bold"
   tmux set-window-option -g window-status-bell-style "bold"
   tmux set-option -g status-style "fg=white,bg=default"
-  tmux set-option -g status-left ""
-  tmux set-option -g status-right ""
+  tmux set-option -ga status-left "#[fg=cyan] Left Status | "
+  tmux set-option -ga status-right " | Right Status #[fg=magenta]"
   tmux set-option -g status-justify centre
   tmux set-option -g status-position bottom
   tmux set-option -g pane-active-border-style "bg=default,fg=default"
