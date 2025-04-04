@@ -42,5 +42,5 @@ normalize_percent_len() {
 }
 
 installed() {
-  command -v $1 &> /dev/null
+  command -v $1 &>/dev/null
 }
